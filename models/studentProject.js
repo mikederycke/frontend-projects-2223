@@ -10,3 +10,7 @@ const studentProjectSchema = mongoose.Schema({
     projectImage: { type: String, required: true },
     creator: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true }
 });
+
+const StudentProject = mongoose.model('StudentProject', studentProjectSchema);
+
+module.exports = StudentProject;
